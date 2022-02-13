@@ -9,7 +9,7 @@ public class Ornek {
     @Test
     public void test01(){
 
-        Driver.getDriver().get(ConfigReader.getPropery("HMCUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
 
     }
 }

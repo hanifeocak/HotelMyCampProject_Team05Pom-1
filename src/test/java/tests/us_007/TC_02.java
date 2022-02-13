@@ -6,7 +6,7 @@ import pages.HMCPages;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class TC_01 {
+public class TC_02 {
 
     @Test
     public void detailsYonlendirmeTesti(){
@@ -16,8 +16,9 @@ public class TC_01 {
 
         hotelMyCampPage.hotelManagementLink.click();
         hotelMyCampPage.hotelRoomsLink.click();
+        hotelMyCampPage.listOfHotelRoomsDetailsButton.click();
 
-        Assert.assertTrue(hotelMyCampPage.listOfHotelRoomsDetailsButton.isDisplayed());
+        Assert.assertTrue(hotelMyCampPage.detailsGirisKontrol.isDisplayed());
 
         Driver.closeDriver();
     }
