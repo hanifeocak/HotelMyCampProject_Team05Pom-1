@@ -50,10 +50,17 @@ public class Driver {
     }
 
     public static void closeDriver(){
+<<<<<<< HEAD
         if( driver != null){
             driver.quit();
             driver = null;
         }
+=======
+       if( driver != null){
+           driver.quit();
+           driver = null;
+       }
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
     }
 
 

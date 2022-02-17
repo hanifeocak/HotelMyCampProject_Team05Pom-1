@@ -1,4 +1,5 @@
 package utilities;
+<<<<<<< HEAD
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
@@ -8,6 +9,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+=======
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.*;
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -15,8 +22,13 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+<<<<<<< HEAD
 import java.util.function.Function;
 
+=======
+import java.util.Random;
+import java.util.function.Function;
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
 public class ReusableMethods {
 
     public static String getScreenshot(String name) throws IOException {
@@ -32,7 +44,10 @@ public class ReusableMethods {
         FileUtils.copyFile(source, finalDestination);
         return target;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
     //========Switching Window=====//
     public static void switchToWindow(String targetTitle) {
         String origin = Driver.getDriver().getWindowHandle();
@@ -44,13 +59,19 @@ public class ReusableMethods {
         }
         Driver.getDriver().switchTo().window(origin);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
     //========Hover Over=====//
     public static void hover(WebElement element) {
         Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(element).perform();
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
     //==========Return a list of string given a list of Web Element====////
     public static List<String> getElementsText(List<WebElement> list) {
         List<String> elemTexts = new ArrayList<>();
@@ -61,7 +82,10 @@ public class ReusableMethods {
         }
         return elemTexts;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
     //========Returns the Text of the element given an element locator==//
     public static List<String> getElementsText(By locator) {
         List<WebElement> elems = Driver.getDriver().findElements(locator);
@@ -73,7 +97,10 @@ public class ReusableMethods {
         }
         return elemTexts;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
     //   HARD WAIT WITH THREAD.SLEEP
 //   waitFor(5);  => waits for 5 second
     public static void waitFor(int sec) {
@@ -83,29 +110,44 @@ public class ReusableMethods {
             e.printStackTrace();
         }
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
     //===============Explicit Wait==============//
     public static WebElement waitForVisibility(WebElement element, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
     public static WebElement waitForVisibility(By locator, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
     public static WebElement waitForClickablility(WebElement element, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
     public static WebElement waitForClickablility(By locator, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
     public static void clickWithTimeOut(WebElement element, int timeout) {
         for (int i = 0; i < timeout; i++) {
             try {
@@ -116,7 +158,10 @@ public class ReusableMethods {
             }
         }
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
     public static void waitForPageToLoad(long timeout) {
         ExpectedCondition<Boolean> expectation = new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver driver) {
@@ -132,19 +177,26 @@ public class ReusableMethods {
                     "Timeout waiting for Page Load Request to complete after " + timeout + " seconds");
         }
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
     //======Fluent Wait====//
     public static WebElement fluentWait(final WebElement webElement, int timeout) {
         //FluentWait<WebDriver> wait = new FluentWait<WebDriver>(Driver.getDriver()).withTimeout(timeinsec, TimeUnit.SECONDS).pollingEvery(timeinsec, TimeUnit.SECONDS);
         FluentWait<WebDriver> wait = new FluentWait<WebDriver>(Driver.getDriver())
                 .withTimeout(Duration.ofSeconds(3))//Wait 3 second each time
                 .pollingEvery(Duration.ofSeconds(1));//Check for the element every 1 second
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
         WebElement element = wait.until(new Function<WebDriver, WebElement>() {
             public WebElement apply(WebDriver driver) {
                 return webElement;
             }
         });
+<<<<<<< HEAD
 
         return element;
     }
@@ -153,4 +205,8 @@ public class ReusableMethods {
         jse.executeScript("arguments[0].scrollIntoView()",element);
         jse.executeScript("arguments[0].click();", element);
     }
+=======
+        return element;
+    }
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
 }

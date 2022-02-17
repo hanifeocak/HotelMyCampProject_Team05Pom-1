@@ -7,16 +7,26 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public abstract class TestBaseRapor {
+<<<<<<< HEAD
     public static ExtentReports extentReports; //extent report'a ilk atamayi yapar
     protected static ExtentTest extentTest; // test pass veya failed gibi bilgileri kaydeder. Ayrica ekran resmi icin de kullaniriz
     protected static ExtentHtmlReporter extentHtmlReporter; // Html raporu duzenler
 
+=======
+
+    protected static ExtentReports extentReports; //extent report'a ilk atamayi yapar
+    protected static ExtentTest extentTest; // test pass veya failed gibi bilgileri kaydeder. Ayrica ekran resmi icin de kullaniriz
+    protected static ExtentHtmlReporter extentHtmlReporter; // Html raporu duzenler
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
     // Test işlemine başlamadan hemen önce (test methodundan önce değil, tüm test işleminden önce)
     @BeforeTest(alwaysRun = true) // alwaysRun : her zaman çalıştır.
     public void setUpTest() {
@@ -27,6 +37,7 @@ public abstract class TestBaseRapor {
         //oluşturmak istediğimiz raporu (html formatında) başlatıyoruz, filePath ile dosya yolunu belirliyoruz.
         extentHtmlReporter = new ExtentHtmlReporter(filePath);
         extentReports.attachReporter(extentHtmlReporter);
+<<<<<<< HEAD
 
         // İstediğiniz bilgileri buraya ekeyebiliyorsunuz.
         extentReports.setSystemInfo("Enviroment","QA");
@@ -41,6 +52,18 @@ public abstract class TestBaseRapor {
     @AfterMethod(alwaysRun = true)
     public void tearDownMethod(ITestResult result) throws IOException {
 
+=======
+        // İstediğiniz bilgileri buraya ekeyebiliyorsunuz.
+        extentReports.setSystemInfo("Enviroment","QA");
+        extentReports.setSystemInfo("Browser", ConfigReader.getProperty("browser")); // chrome, firefox
+        extentReports.setSystemInfo("Automation Engineer", "Emrah");
+        extentHtmlReporter.config().setDocumentTitle("Son Test");
+        extentHtmlReporter.config().setReportName("TestNG Report");
+    }
+    // Her test methodundan sonra eğer testte hata varsa, ekran görüntüsü alıp rapora ekliyor
+    @AfterMethod(alwaysRun = true)
+    public void tearDownMethod(ITestResult result) throws IOException {
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
         if (result.getStatus() == ITestResult.FAILURE) { // eğer testin sonucu başarısızsa
             String screenshotLocation = ReusableMethods.getScreenshot(result.getName());
             extentTest.fail(result.getName());
@@ -51,11 +74,18 @@ public abstract class TestBaseRapor {
         }
         Driver.closeDriver();
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
     // Raporlandırmayı sonlandırmak icin
     @AfterTest(alwaysRun = true)
     public void tearDownTest() {
         extentReports.flush();
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
