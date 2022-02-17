@@ -44,4 +44,11 @@ public class HMCPages {
             e.printStackTrace();
         }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3c6e3a84df0bdff6e59d15debff1ec0a9099aa7f
 }
+=======
+}
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
