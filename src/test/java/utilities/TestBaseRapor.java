@@ -1,10 +1,14 @@
 package utilities;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> Ayse
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -19,10 +23,13 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 >>>>>>> 84ed54ae27564eb306e289377de71baa47eca224
+=======
+>>>>>>> Ayse
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -36,10 +43,14 @@ import org.testng.annotations.BeforeTest;
 >>>>>>> 2f3d9805d9a4862e8f595348d410ea629109d617
 >>>>>>> 3c6e3a84df0bdff6e59d15debff1ec0a9099aa7f
 >>>>>>> 84ed54ae27564eb306e289377de71baa47eca224
+=======
+
+>>>>>>> Ayse
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public abstract class TestBaseRapor {
         protected static ExtentReports extentReports; //extent report'a ilk atamayi yapar
@@ -121,6 +132,13 @@ public abstract class TestBaseRapor {
 =======
 >>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
 >>>>>>> 3c6e3a84df0bdff6e59d15debff1ec0a9099aa7f
+=======
+public class TestBaseRapor {
+    protected static ExtentReports extentReports; //extent report'a ilk atamayi yapar
+    protected static ExtentTest extentTest; // test pass veya failed gibi bilgileri kaydeder. Ayrica ekran resmi icin de kullaniriz
+    protected static ExtentHtmlReporter extentHtmlReporter; // Html raporu duzenler
+
+>>>>>>> Ayse
     // Test işlemine başlamadan hemen önce (test methodundan önce değil, tüm test işleminden önce)
     @BeforeTest(alwaysRun = true) // alwaysRun : her zaman çalıştır.
     public void setUpTest() {
@@ -132,6 +150,7 @@ public abstract class TestBaseRapor {
         extentHtmlReporter = new ExtentHtmlReporter(filePath);
         extentReports.attachReporter(extentHtmlReporter);
 <<<<<<< HEAD
+<<<<<<< HEAD
         // İstediğiniz bilgileri buraya ekeyebiliyorsunuz.
         extentReports.setSystemInfo("Enviroment","QA");
         extentReports.setSystemInfo("Browser", ConfigReader.getProperty("browser")); // chrome, firefox
@@ -139,10 +158,13 @@ public abstract class TestBaseRapor {
 =======
 <<<<<<< HEAD
 >>>>>>> 2f3d9805d9a4862e8f595348d410ea629109d617
+=======
+>>>>>>> Ayse
 
         // İstediğiniz bilgileri buraya ekeyebiliyorsunuz.
         extentReports.setSystemInfo("Enviroment","QA");
         extentReports.setSystemInfo("Browser", ConfigReader.getProperty("browser")); // chrome, firefox
+<<<<<<< HEAD
 <<<<<<< HEAD
         extentReports.setSystemInfo("Automation Engineer", "Mehmet");
 >>>>>>> 3c6e3a84df0bdff6e59d15debff1ec0a9099aa7f
@@ -160,6 +182,9 @@ public abstract class TestBaseRapor {
     public void tearDownMethod(ITestResult result) throws IOException {
 =======
         extentReports.setSystemInfo("Automation Engineer", "Oguzhan");
+=======
+        extentReports.setSystemInfo("Automation Engineer", "Mehmet");
+>>>>>>> Ayse
         extentHtmlReporter.config().setDocumentTitle("Son Test");
         extentHtmlReporter.config().setReportName("TestNG Reports");
     }
@@ -169,6 +194,7 @@ public abstract class TestBaseRapor {
     @AfterMethod(alwaysRun = true)
     public void tearDownMethod(ITestResult result) throws IOException {
 
+<<<<<<< HEAD
 =======
         // İstediğiniz bilgileri buraya ekeyebiliyorsunuz.
         extentReports.setSystemInfo("Enviroment","QA");
@@ -183,6 +209,8 @@ public abstract class TestBaseRapor {
 >>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
 >>>>>>> 2f3d9805d9a4862e8f595348d410ea629109d617
 >>>>>>> 3c6e3a84df0bdff6e59d15debff1ec0a9099aa7f
+=======
+>>>>>>> Ayse
         if (result.getStatus() == ITestResult.FAILURE) { // eğer testin sonucu başarısızsa
             String screenshotLocation = ReusableMethods.getScreenshot(result.getName());
             extentTest.fail(result.getName());
@@ -191,6 +219,7 @@ public abstract class TestBaseRapor {
         } else if (result.getStatus() == ITestResult.SKIP) { // eğer test çalıştırılmadan geçilmezse
             extentTest.skip("Test Case is skipped: " + result.getName()); // Ignore olanlar
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
         Driver.closeDriver();
     }
@@ -214,10 +243,18 @@ public abstract class TestBaseRapor {
     // Raporlandırmayı sonlandırmak icin
 >>>>>>> 2f3d9805d9a4862e8f595348d410ea629109d617
 >>>>>>> 3c6e3a84df0bdff6e59d15debff1ec0a9099aa7f
+=======
+        Driver.closeDriver();
+    }
+
+
+    // Raporlandırmayı sonlandırmak icin
+>>>>>>> Ayse
     @AfterTest(alwaysRun = true)
     public void tearDownTest() {
         extentReports.flush();
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -233,3 +270,6 @@ public abstract class TestBaseRapor {
 >>>>>>> 2f3d9805d9a4862e8f595348d410ea629109d617
 >>>>>>> 3c6e3a84df0bdff6e59d15debff1ec0a9099aa7f
 >>>>>>> 84ed54ae27564eb306e289377de71baa47eca224
+=======
+}
+>>>>>>> Ayse

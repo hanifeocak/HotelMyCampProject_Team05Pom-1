@@ -45,6 +45,7 @@ public class HMCPages {
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
@@ -56,3 +57,6 @@ public class HMCPages {
 }
 >>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
 >>>>>>> 84ed54ae27564eb306e289377de71baa47eca224
+=======
+}
+>>>>>>> Ayse

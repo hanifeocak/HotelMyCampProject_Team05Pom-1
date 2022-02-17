@@ -50,6 +50,7 @@ public class Driver {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static void closeDriver(){
 =======
     public static void closeDriver(){
@@ -61,6 +62,9 @@ public class Driver {
 >>>>>>> 2f3d9805d9a4862e8f595348d410ea629109d617
 >>>>>>> 3c6e3a84df0bdff6e59d15debff1ec0a9099aa7f
 >>>>>>> 84ed54ae27564eb306e289377de71baa47eca224
+=======
+    public static void closeDriver(){
+>>>>>>> Ayse
         if( driver != null){
           driver.quit();
             driver = null;
