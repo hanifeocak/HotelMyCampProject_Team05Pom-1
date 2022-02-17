@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hotelMyCampProject_Team05POM" />
+        <module name="HotelMyCampProject_Team05Pom" />
       </profile>
     </annotationProcessing>
   </component>
