@@ -11,6 +11,8 @@ public class TC_01 extends TestBaseRapor {
     HMCPages hmcPages=new HMCPages();
     US_004 us_004=new US_004();
 
+
+
     //TC_001  'ADD HOTEL' butonu gorunur ve erisilebilir olmalidir.
     @Test
     public void test01(){
