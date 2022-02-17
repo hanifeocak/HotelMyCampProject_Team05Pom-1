@@ -5,28 +5,28 @@ import pages.HMCPages;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
-public class TC_01 extends TestBaseRapor {
+public class TC_03 extends TestBaseRapor {
     @Test
-    public void girisSayfasiTesti(){
+    public void passwordKutusuGorunurVeriGirisiTesi(){
         HMCPages hmcPages= new HMCPages();
 
-        extentTest=extentReports.createTest("TC_01",
-                "Giris sayfasının gorulebilir olmasi Testi");
+        extentTest=extentReports.createTest("TC_03",
+                "Password kutusu gorunu ve veri girisi yapilma testi");
 
         //1- Yönetici olarak URL'ye gider
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         extentTest.info("Url'e gidildi");
 
-        //2- Log in butonuna gorur
-        Assert.assertTrue(hmcPages.firstLogInElement.isDisplayed());
-        extentTest.info("Log in butonu goruldu");
-
-        //3- Log in butonuna tiklar
+        //2- Log in butonuna basar
         hmcPages.firstLogInElement.click();
         extentTest.info("Log in butonuna tikladi");
 
-        //4- Giris sayfası acilir
+        //3- Log in butonunu gorulur
         Assert.assertTrue(hmcPages.secondLogInElement.isDisplayed());
-        extentTest.info("Giris sayfasi goruldu");
+        extentTest.info("Password kutusu gorunur");
+
+        //4- Log in butonuna erisebilmeilidir
+        hmcPages.userNameBoxElement.sendKeys(ConfigReader.getProperty("HMCValidUsername"));
+        extentTest.info("Password kutusuna veri girisi yapildi");
     }
 }
