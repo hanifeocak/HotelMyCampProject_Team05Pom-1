@@ -1,13 +1,10 @@
 package pages;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
-
 public class HMCPages {
     public HMCPages(){ PageFactory.initElements(Driver.getDriver(),this);  }
-
     @FindBy(xpath = "(//a[@class='nav-link'])[7]")
     public WebElement firstLogInElement ;
     @FindBy (xpath = "//input[@id='UserName']")
@@ -47,10 +44,8 @@ public class HMCPages {
             e.printStackTrace();
         }
     }
-
-
-
-
-
-
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1

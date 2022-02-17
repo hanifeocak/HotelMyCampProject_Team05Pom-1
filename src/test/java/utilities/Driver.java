@@ -1,5 +1,7 @@
 package utilities;
 
+
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -48,10 +50,20 @@ public class Driver {
     }
 
     public static void closeDriver(){
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f3d9805d9a4862e8f595348d410ea629109d617
         if( driver != null){
             driver.quit();
             driver = null;
         }
+=======
+       if( driver != null){
+           driver.quit();
+           driver = null;
+       }
+>>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
     }
 
 
