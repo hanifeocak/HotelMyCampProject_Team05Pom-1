@@ -13,6 +13,7 @@ public class TC_01 extends TestBaseRapor {
 
 
 
+
     //TC_001  'ADD HOTEL' butonu gorunur ve erisilebilir olmalidir.
     @Test
     public void test01(){
