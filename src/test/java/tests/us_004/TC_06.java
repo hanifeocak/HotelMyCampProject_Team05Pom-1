@@ -11,13 +11,13 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 
-public class TC_05 extends TestBaseRapor {
+public class TC_06 extends TestBaseRapor {
 
     HMCPages hmcPages=new HMCPages();
     US_004 us_004=new US_004();
-    //TC_003 IDGroup dropdown secenegi ve Save butonunun calistigi kontrol edilip test edilmeli
+    //TC_004 "hotel was inserted successfully" yazısını görebilmeli ve "ok" butonu tıklanabilir olmalı
     @Test
-    public void test03(){
+    public void test04() throws InterruptedException {
         extentTest=extentReports.createTest("kullanıcı hesabı olusturma islemi testi",
                 "kullanıcı hesap olusturma islemlerini yapmasi gerekir");
         //1- Yonetici url e gider.
@@ -48,6 +48,18 @@ public class TC_05 extends TestBaseRapor {
         //12-"IDGroup" dropdown butonuna tıklayıp Grup seçiniz
         us_004.createHotelDropdownButton();
         //13-"Save" butonuna tıklayın
+        Thread.sleep(5000);
         us_004.createHotelSaveBox.click();
+        //14-"HotelRoom was inserted successfully" yazısının görünürlüğü test edilmeli
+        Thread.sleep(5000);
+        Assert.assertTrue(us_004.createHotelWasInsertedSuccessfullyText.isDisplayed());
+        //15-"OK" butonuna tıklayın ve otel listesini tıklayın
+        us_004.createHotelWasInsertedSuccessfullyOkButton.click();
+
+
+
     }
+
+
+
 }
