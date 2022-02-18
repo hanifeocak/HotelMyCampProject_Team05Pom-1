@@ -44,26 +44,4 @@ public class HMCPages {
             e.printStackTrace();
         }
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c5e8bb6b75c6946a47b2689e6e7358f260bfbb2d
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 3c6e3a84df0bdff6e59d15debff1ec0a9099aa7f
-}
-=======
-}
->>>>>>> 9dca7b638a4088fbb6ab179c49d9dfe605d329e1
->>>>>>> 84ed54ae27564eb306e289377de71baa47eca224
-=======
-}
->>>>>>> Ayse
->>>>>>> eefaef94da1ca4d010e2ccf3c59f1e1e6c2d4935
