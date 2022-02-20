@@ -1,4 +1,5 @@
 package utilities;
+<<<<<<< HEAD
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
@@ -7,6 +8,12 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+=======
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.*;
+>>>>>>> 0c3a1fa79e31bbc35db493f186923608e14d252e
 
 import java.io.File;
 import java.io.IOException;
@@ -18,6 +25,10 @@ import java.util.List;
 import java.util.function.Function;
 
 public class ReusableMethods {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0c3a1fa79e31bbc35db493f186923608e14d252e
     public static String getScreenshot(String name) throws IOException {
         // naming the screenshot with the current date to avoid duplication
         String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
@@ -132,4 +143,8 @@ public class ReusableMethods {
         });
         return element;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 0c3a1fa79e31bbc35db493f186923608e14d252e
