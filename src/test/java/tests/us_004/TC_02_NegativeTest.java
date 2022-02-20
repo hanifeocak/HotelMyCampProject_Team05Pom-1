@@ -67,7 +67,4 @@ public class TC_02_NegativeTest extends TestBaseRapor {
         extentTest.info("Email kutucuguna veri gonderildi");
 
     }
-
-
-
 }
