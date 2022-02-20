@@ -15,7 +15,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
-public class TC_003 extends TestBaseRapor {
+public class TC_03 extends TestBaseRapor {
     static WebDriver driver;
     static Select select;
     static Select select2;
@@ -52,7 +52,7 @@ public class TC_003 extends TestBaseRapor {
 
 
         //1- Username test datasi girilir.
-        us003Pages.registrationFromUsername.sendKeys("Emre179");
+        us003Pages.registrationFromUsername.sendKeys("Emre1792222");
         extentTest.info("Username girildi");
 
         //2- Password test datasi girilir.
@@ -60,7 +60,7 @@ public class TC_003 extends TestBaseRapor {
         extentTest.info("Password girildi");
 
         //3- Email test datasi girilir.
-        us003Pages.registrationFromEmail.sendKeys("emre179@techproed.com");
+        us003Pages.registrationFromEmail.sendKeys("emre1792222@techproed.com");
         extentTest.info("email girildi");
 
         //4- Full Name test datasi girilir.

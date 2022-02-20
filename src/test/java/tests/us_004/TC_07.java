@@ -48,10 +48,10 @@ public class TC_07 extends TestBaseRapor {
         //12-"IDGroup" dropdown butonuna tıklayıp Grup seçiniz
         us_004.createHotelDropdownButton();
         //13-"Save" butonuna tıklayın
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         us_004.createHotelSaveBox.click();
         //14-"HotelRoom was inserted successfully" yazısının görünürlüğü test edilmeli
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         Assert.assertTrue(us_004.createHotelWasInsertedSuccessfullyText.isDisplayed());
         //15-"OK" butonuna tıklayın ve otel listesini tıklayın
         us_004.createHotelWasInsertedSuccessfullyOkButton.click();
@@ -64,5 +64,10 @@ public class TC_07 extends TestBaseRapor {
         //17-"Search" butonuna tıklayın ve unique bir kaydın yapılıp yapılmadıgını dogrulayın
         us_004.listOfHotelsSearchButton.click();
         Assert.assertTrue(us_004.listOfHotelUniqueSearch.isEnabled());
+        actions.moveToElement(hmcPages.kullaniciAdiElement).perform();
+        hmcPages.logOut.click();
+        actions.moveToElement(hmcPages.kullaniciAdiElement).perform();
+        hmcPages.logOut.click();
+
     }
 }

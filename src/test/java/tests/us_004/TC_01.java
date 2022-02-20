@@ -1,4 +1,5 @@
 package tests.us_004;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HMCPages;
@@ -8,11 +9,9 @@ import utilities.Driver;
 import utilities.TestBaseRapor;
 
 public class TC_01 extends TestBaseRapor {
+
     HMCPages hmcPages=new HMCPages();
     US_004 us_004=new US_004();
-
-
-
 
     //TC_001  'ADD HOTEL' butonu gorunur ve erisilebilir olmalidir.
     @Test
@@ -45,6 +44,9 @@ public class TC_01 extends TestBaseRapor {
         //6- "Add Hotel" butonuna erisebilir.
         Assert.assertTrue(hmcPages.addHotelLinki.isDisplayed());
         extentTest.info("Add hotel kisminin gorunur oldugu goruldu");
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(hmcPages.kullaniciAdiElement).perform();
+        hmcPages.logOut.click();
     }
 
 }

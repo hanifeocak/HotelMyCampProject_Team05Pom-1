@@ -9,7 +9,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
-public class TC_005 extends TestBaseRapor {
+public class TC_05 extends TestBaseRapor {
     //  5-Kullanici Negatif giris testi
 
     //   1-Kullanici url'e gider

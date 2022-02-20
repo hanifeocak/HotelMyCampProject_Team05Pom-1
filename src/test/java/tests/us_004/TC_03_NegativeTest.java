@@ -1,5 +1,6 @@
 package tests.us_004;
 
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HMCPages;
@@ -46,6 +47,7 @@ public class TC_03_NegativeTest extends TestBaseRapor {
         //6- "Add Hotel" butonuna erisebilir.
         Assert.assertTrue(hmcPages.addHotelLinki.isDisplayed());
         extentTest.info("Add hotel kisminin gorunur oldugu goruldu");
+        hmcPages.addHotelLinki.click();
 
         //7-"Code" kutucuğuna tıklayıp bir Kod giriniz
         hmcPages.addHotelCodeBox.sendKeys("187150015");
@@ -66,6 +68,11 @@ public class TC_03_NegativeTest extends TestBaseRapor {
         //11-"Mail" kutucuğuna tıklayıp Email Adresi giriniz
         us_004.createHotelEmailBox.sendKeys("yucedalo@gmail.com");
         extentTest.info("Email kutucuguna veri gonderildi");
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(hmcPages.kullaniciAdiElement).perform();
+        hmcPages.logOut.click();
+
+
 
     }
 

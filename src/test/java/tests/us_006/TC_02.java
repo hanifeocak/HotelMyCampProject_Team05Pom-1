@@ -12,13 +12,13 @@ import utilities.TestBaseRapor;
 public class TC_02 extends TestBaseRapor {
     @Test
     public void test02(){
+
+        HMCPages hmcPages=new HMCPages();
         extentTest=extentReports.createTest("yonetici login testi",
                 "yonetici oda olusturma islemlerini yapmasi gerekir");
 
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
-extentTest.info("Url'e gidildi");
-
-        HMCPages hmcPages=new HMCPages();
+        extentTest.info("Url'e gidildi");
 
         WebElement firstLogInElement = hmcPages.firstLogInElement;
 
@@ -32,7 +32,7 @@ extentTest.info("Url'e gidildi");
         //	Degerleri girildiginde sayfaya basarili sekilde girilemedigini test edin
         // FALSE //
 
-        Assert.assertFalse(hmcPages.girisYapilamadiYaziTesti.isDisplayed());
+        Assert.assertTrue(hmcPages.girisYapilamadiYaziTesti.isDisplayed());
 
     }
 

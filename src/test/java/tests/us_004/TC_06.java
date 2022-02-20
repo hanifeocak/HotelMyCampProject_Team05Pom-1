@@ -2,6 +2,7 @@ package tests.us_004;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -48,13 +49,17 @@ public class TC_06 extends TestBaseRapor {
         //12-"IDGroup" dropdown butonuna tıklayıp Grup seçiniz
         us_004.createHotelDropdownButton();
         //13-"Save" butonuna tıklayın
-        Thread.sleep(5000);
+        Thread.sleep(2000);
         us_004.createHotelSaveBox.click();
         //14-"HotelRoom was inserted successfully" yazısının görünürlüğü test edilmeli
-        Thread.sleep(5000);
+        Thread.sleep(2000);
         Assert.assertTrue(us_004.createHotelWasInsertedSuccessfullyText.isDisplayed());
         //15-"OK" butonuna tıklayın ve otel listesini tıklayın
         us_004.createHotelWasInsertedSuccessfullyOkButton.click();
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(hmcPages.kullaniciAdiElement).perform();
+        hmcPages.logOut.click();
+
 
 
 

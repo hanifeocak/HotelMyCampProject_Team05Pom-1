@@ -28,5 +28,6 @@ public class TC_01 extends TestBaseRapor {
         //4- Giris sayfası acilir
         Assert.assertTrue(hmcPages.secondLogInElement.isDisplayed());
         extentTest.info("Giris sayfasi goruldu");
+        Driver.closeDriver();
     }
 }

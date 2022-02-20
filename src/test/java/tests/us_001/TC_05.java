@@ -14,7 +14,7 @@ public class TC_05 {
 
     @Test
     public void test01() throws InterruptedException {
-        Driver.getDriver().get(ConfigReader.getPropery("HMCUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         AnaSayfaButonlar anaSayfaButonlar = new AnaSayfaButonlar();
         Actions actions=new Actions(Driver.getDriver());
         actions.sendKeys(Keys.DOWN).perform();
@@ -44,5 +44,6 @@ public class TC_05 {
         select.selectByIndex(4);
         Thread.sleep(1000);
         anaSayfaButonlar.checkAvailability.click();
+        Driver.closeDriver();
     }
 }

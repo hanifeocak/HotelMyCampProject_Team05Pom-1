@@ -9,15 +9,16 @@ import org.testng.annotations.Test;
 import pages.AnaSayfaButonlar;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
 import java.io.File;
 import java.io.IOException;
 
-public class TC_02 {
+public class TC_02 extends TestBaseRapor {
 
     @Test
     public void ikinciGörev() throws IOException {
-        Driver.getDriver().get(ConfigReader.getPropery("HMCUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         AnaSayfaButonlar anaSayfaButonlar = new AnaSayfaButonlar();
         WebElement expectedResult= anaSayfaButonlar.welcomeToHotelmyCamp;
         Assert.assertTrue(expectedResult.isEnabled());
@@ -26,6 +27,7 @@ public class TC_02 {
         File tumSayfaSS = new File("target/screenShot/tumsayfa.png");
         File geciciResim=tss.getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(geciciResim,tumSayfaSS);
+        Driver.closeDriver();
 
 
     }

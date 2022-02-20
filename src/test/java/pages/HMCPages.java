@@ -37,6 +37,10 @@ public class HMCPages {
     public WebElement hotelRoomsLink;
     @FindBy (xpath = "//span[@class='caption-subject font-green-sharp bold uppercase']")
     public WebElement listOfHotelRoomsText;
+    @FindBy (xpath = "//span[@class='username username-hide-on-mobile']")
+    public WebElement kullaniciAdiElement;
+    @FindBy (xpath="//a[@href='/Admin/Account/Logoff']")
+    public WebElement logOut;
 
     public void bekle(int saniye) {
         try {

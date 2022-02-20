@@ -20,7 +20,7 @@ public class US_005Pages {
     @FindBy(xpath = "(//i[@class='icon-calendar'])[2]")
     public WebElement hotelListIkonElementi;
 
-    @FindBy(xpath = "(//a[@class='btn btn-xs default'])[1]")
+    @FindBy(xpath = "//a[@href='./HotelAdmin/Edit?Id=1635']")
     public WebElement detailsButonElementi;
 
     @FindBy(xpath = "(//div[@class='portlet-title'])[1]")

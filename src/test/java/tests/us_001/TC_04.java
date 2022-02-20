@@ -10,7 +10,7 @@ public class TC_04 {
 
     @Test
     public void test01() throws InterruptedException {
-        Driver.getDriver().get(ConfigReader.getPropery("HMCUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         AnaSayfaButonlar anaSayfaButonlar = new AnaSayfaButonlar();
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
 
@@ -97,7 +97,7 @@ public class TC_04 {
         Thread.sleep(1000);
 
 
-        Driver.getDriver().close();
+        Driver.closeDriver();
 
     }
 

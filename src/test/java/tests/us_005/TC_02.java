@@ -7,15 +7,18 @@ import pages.US_005Pages;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
-public class TC_02 {
-    US_005Pages us005Pages=new US_005Pages();
+public class TC_02  {
+
+
     @Test
     public  void test01() {
         //https://hotelmycamp.com/
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
 
         //Sağ üstteki "Login"butonuna tıklayın
+        US_005Pages us005Pages=new US_005Pages();
         HMCPages hmcPages = new HMCPages();
         hmcPages.firstLogInElement.click();
 
@@ -26,7 +29,6 @@ public class TC_02 {
         hmcPages.passwordBoxElement.sendKeys(ConfigReader.getProperty("HMCValidPassword"));
         hmcPages.bekle(3);
 
-
         //"Login" Butonuna tıklayın
         hmcPages.secondLogInElement.click();
 
@@ -36,11 +38,13 @@ public class TC_02 {
         hmcPages.hotelListLinki.click();
         //"List Of Hotels" başlığının görünürlüğünü kontrol edin
         Assert.assertTrue(hmcPages.basariliGirisYapildi.isDisplayed());
-      //"Details" butonuna tıklayın
 
-        us005Pages.detailsButonElementi.click();
+      //"Details" butonuna tıklayın
+        hmcPages.bekle(3);
+       us005Pages.detailsButonElementi.click();
+
      //"Edit Hotel" başlığının görünürlüğünü kontrol edin
         ReusableMethods.switchToWindow("Admin - Edit Hotel");
        Assert.assertTrue(us005Pages.editHotelYaziElementi.isDisplayed());
-    }
+        }
     }

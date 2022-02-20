@@ -28,5 +28,6 @@ public class TC_02 extends TestBaseRapor {
         //4- Username kutusuna veri girer
         hmcPages.userNameBoxElement.sendKeys(ConfigReader.getProperty("HMCValidUsername"));
         extentTest.info("Username kutusuna veri girisi yapildi");
+        Driver.closeDriver();
     }
 }

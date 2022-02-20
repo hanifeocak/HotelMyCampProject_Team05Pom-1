@@ -16,7 +16,7 @@ public class TC_01 {
     @Test
     public void test01() {
 
-        Driver.getDriver().get(ConfigReader.getPropery("HMCUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         AnaSayfaButonlar anaSayfaButonlar = new AnaSayfaButonlar();
         anaSayfaButonlar.Home.click();
         anaSayfaButonlar.Rooms.click();
@@ -31,7 +31,7 @@ public class TC_01 {
         Driver.getDriver().navigate().back();
         anaSayfaButonlar.Login.click();
         Driver.getDriver().close();
-
+        Driver.closeDriver();
 
     }
 

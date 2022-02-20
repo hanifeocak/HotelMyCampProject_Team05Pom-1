@@ -8,7 +8,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 
-public class TC_002 extends TestBaseRapor {
+public class TC_02 extends TestBaseRapor {
     @Test
     public void test02(){
         // 2.Kullanici Login sayfasinda yeni hesap olustur butonuna erismeli ve basvuru formuna erismelidir.

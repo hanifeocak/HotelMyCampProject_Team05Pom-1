@@ -2,6 +2,7 @@ package tests.us_004;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -49,5 +50,9 @@ public class TC_05 extends TestBaseRapor {
         us_004.createHotelDropdownButton();
         //13-"Save" butonuna tıklayın
         us_004.createHotelSaveBox.click();
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(hmcPages.kullaniciAdiElement).perform();
+        hmcPages.logOut.click();
+
     }
 }

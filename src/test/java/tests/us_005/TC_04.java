@@ -8,8 +8,9 @@ import pages.US_005Pages;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
-public class TC_04 {
+public class TC_04 extends TestBaseRapor {
     US_005Pages us005Pages=new US_005Pages();
     @Test
 public  void test01() {

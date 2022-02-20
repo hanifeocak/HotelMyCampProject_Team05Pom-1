@@ -6,11 +6,12 @@ import org.testng.annotations.Test;
 import pages.AnaSayfaButonlar;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
-public class TC_03 {
+public class TC_03 extends TestBaseRapor {
     @Test
     public void test01() throws InterruptedException {
-        Driver.getDriver().get(ConfigReader.getPropery("HMCUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         AnaSayfaButonlar anaSayfaButonlar = new AnaSayfaButonlar();
         JavascriptExecutor jse=(JavascriptExecutor)Driver.getDriver();
 
@@ -55,6 +56,7 @@ public class TC_03 {
         jse.executeScript("arguments[0].click();",anaSayfaButonlar.room6);
         Thread.sleep(2000);
         Driver.getDriver().navigate().back();
+        Driver.closeDriver();
 
 
 
