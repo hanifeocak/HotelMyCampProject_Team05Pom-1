@@ -3,7 +3,6 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utilities.ConfigReader;
 import utilities.Driver;
 
 public class HMCPages {
@@ -58,13 +57,6 @@ public class HMCPages {
     @FindBy (xpath = "//span[@class='caption-subject font-green-sharp bold uppercase']")
     public WebElement listOfHotelRoomsText;
 
-    @FindBy(xpath = " //a[@class='btn btn-xs default']")
-    public WebElement listOfHotelRoomsDetailsButton;
-
-    @FindBy(xpath = " //a[text()='Edit Hotelroom']")
-    public WebElement detailsGirisKontrol;
-
-
     public void bekle(int saniye) {
         try {
             Thread.sleep(saniye*1000);
@@ -73,13 +65,7 @@ public class HMCPages {
         }
     }
 
-    public void girisYap(){
-        Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
-        firstLogInElement.click();
-        userNameBoxElement.sendKeys(ConfigReader.getProperty("HMCValidUsername"));
-        passwordBoxElement.sendKeys(ConfigReader.getProperty("HMCValidPassword"));
-        secondLogInElement.click();
-    }
+
 
 
 
