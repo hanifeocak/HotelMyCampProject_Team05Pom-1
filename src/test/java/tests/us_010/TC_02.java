@@ -11,7 +11,7 @@ import utilities.TestBaseRapor;
 
 public class TC_02 extends TestBaseRapor {
 
-    @Ignore
+
     @Test
     public void reservasyonBilgiTabloTesti(){
 

@@ -11,7 +11,7 @@ import utilities.TestBaseRapor;
 
 public class TC_05 extends TestBaseRapor {
 
-    @Ignore
+
     @Test
     public void rezervasyonBilgileriGuncellemeTesti(){
         extentTest=extentReports.createTest("Rezervasyon bilgileri guncelleme testi",

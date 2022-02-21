@@ -16,7 +16,7 @@ public class TC_01 extends TestBaseRapor {
 
 
     @Test
-    public void test01(){
+    public void kullanıcıHesabıOlusturmaIslemiTesti(){
 
 
         extentTest=extentReports.createTest("kullanıcı hesabı olusturma islemi testi",
@@ -46,7 +46,7 @@ public class TC_01 extends TestBaseRapor {
         us010.createUsername.sendKeys(ConfigReader.getProperty("US010_username"));
         us010.createPassword.sendKeys(ConfigReader.getProperty("US010_password"));
         us010.createEmail.sendKeys(ConfigReader.getProperty("US010_email"));
-        us010.createFullName.sendKeys(ConfigReader.getProperty("US010_Full"));
+        us010.createFullName.sendKeys(ConfigReader.getProperty("US010_Fullname"));
         us010.createPhone.sendKeys(ConfigReader.getProperty("US010_phohe"));
         us010.createSSN.sendKeys(ConfigReader.getProperty("US010_SSN"));
         us010.createDrivingLic.click();

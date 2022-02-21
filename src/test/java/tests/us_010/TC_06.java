@@ -15,7 +15,7 @@ import utilities.TestBaseRapor;
 
 public class TC_06 extends TestBaseRapor {
 
-    @Ignore
+
     @Test
     public void yanlisEmailIleKayıtYapilamazTesti(){
         extentTest=extentReports.createTest("Yanlis email ile rezervasyon gerceklestirilemez testi",

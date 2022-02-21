@@ -52,7 +52,7 @@ public class TC_003 extends TestBaseRapor {
 
 
         //1- Username test datasi girilir.
-        us003Pages.registrationFromUsername.sendKeys("Emre179");
+        us003Pages.registrationFromUsername.sendKeys("Emre17920");
         extentTest.info("Username girildi");
 
         //2- Password test datasi girilir.
@@ -60,7 +60,7 @@ public class TC_003 extends TestBaseRapor {
         extentTest.info("Password girildi");
 
         //3- Email test datasi girilir.
-        us003Pages.registrationFromEmail.sendKeys("emre179@techproed.com");
+        us003Pages.registrationFromEmail.sendKeys("emre17920@techproed.com");
         extentTest.info("email girildi");
 
         //4- Full Name test datasi girilir.

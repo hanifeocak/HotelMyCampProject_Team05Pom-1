@@ -3,7 +3,11 @@
 <suite name="Team05">
     <test name="Team 05 testler">
         <packages>
-            <package name="tests.us_005"></package>
+            <package name="tests.us_001"></package>
+            <package name="tests.us_002"></package>
+            <package name="tests.us_003"></package>
+            <package name="tests.us_007"></package>
+            <package name="tests.us_009"></package>
         </packages>
     </test>
 </suite>
