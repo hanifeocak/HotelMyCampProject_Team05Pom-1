@@ -91,7 +91,7 @@ public class US_010 {
     @FindBy (xpath="//input[@value='Search']")
     public WebElement searchButton;
 
-    @FindBy (xpath = "(//a[@href='/RoomDetail/66'])[2]")
+    @FindBy (xpath = "(//a[@href='/RoomDetail/71'])[2]")
     public WebElement ilkAramaSonucuElement;
 
     @FindBy (xpath = "//input[@id='NameOnCreditCard']")
@@ -133,7 +133,7 @@ public class US_010 {
     @FindBy (xpath = "(//div[@class='row'])[2]")
     public WebElement rezervasyonYapilmazYazisiElement;
 
-    @FindBy (xpath = "//a[@href='/account/logon?returnUrl=%2FRoomDetail%2F66']")
+    @FindBy (xpath = "//a[@href='/account/logon?returnUrl=%2FRoomDetail%2F71']")
     public WebElement rezervasyonYapilmazSayfasıLogInButtonElement;
 
     @FindBy (xpath = "//h2[@class='mb-4']")

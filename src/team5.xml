@@ -1,8 +1,9 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
 <suite name="Team05">
     <test name="Team 05 testler">
-       <packages>
-           <package name="tests.us_006"></package>
-       </packages>
+        <packages>
+            <package name="tests.us_005"></package>
+        </packages>
     </test>
 </suite>

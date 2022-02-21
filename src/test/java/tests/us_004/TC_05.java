@@ -50,9 +50,7 @@ public class TC_05 extends TestBaseRapor {
         us_004.createHotelDropdownButton();
         //13-"Save" butonuna tıklayın
         us_004.createHotelSaveBox.click();
-        Actions actions = new Actions(Driver.getDriver());
-        actions.moveToElement(hmcPages.kullaniciAdiElement).perform();
-        hmcPages.logOut.click();
+
 
     }
 }

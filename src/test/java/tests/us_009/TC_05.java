@@ -19,7 +19,7 @@ public class TC_05 extends TestBaseRapor {
     //9. Yönetici Edit Hotelroomreservatıon sayfasindaki "delete" butonunu tıklar
     //10.Yönetici "Would you like to continue" alert yazisini görür
     //11.Yönetici "Ok" butonuna basar
-    @Test
+    @Test (enabled = false)
     public void  test(){
         Us_009_Pages us_009_pages= new Us_009_Pages();
 

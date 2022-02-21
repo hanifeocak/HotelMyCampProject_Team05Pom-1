@@ -44,9 +44,7 @@ public class TC_01 extends TestBaseRapor {
         //6- "Add Hotel" butonuna erisebilir.
         Assert.assertTrue(hmcPages.addHotelLinki.isDisplayed());
         extentTest.info("Add hotel kisminin gorunur oldugu goruldu");
-        Actions actions = new Actions(Driver.getDriver());
-        actions.moveToElement(hmcPages.kullaniciAdiElement).perform();
-        hmcPages.logOut.click();
+
     }
 
 }

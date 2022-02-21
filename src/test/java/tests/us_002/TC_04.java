@@ -29,6 +29,6 @@ public class TC_04 extends TestBaseRapor {
         //4- Log in butonuna erisebilmeilidir
         Assert.assertTrue(hmcPages.secondLogInElement.isEnabled());
         extentTest.pass("Log in butonu erisilebilir");
-        Driver.closeDriver();
+
     }
 }

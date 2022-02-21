@@ -10,7 +10,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 
-public class TC_04 extends TestBaseRapor {
+public class TC_004 extends TestBaseRapor {
     WebDriver driver;
 
     @Test

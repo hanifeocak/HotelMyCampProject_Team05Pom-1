@@ -28,6 +28,6 @@ public class TC_03 extends TestBaseRapor {
         //4- Log in butonuna erisebilmeilidir
         hmcPages.userNameBoxElement.sendKeys(ConfigReader.getProperty("HMCValidUsername"));
         extentTest.info("Password kutusuna veri girisi yapildi");
-        Driver.closeDriver();
+
     }
 }

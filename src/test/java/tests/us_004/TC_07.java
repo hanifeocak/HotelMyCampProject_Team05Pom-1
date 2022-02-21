@@ -64,10 +64,7 @@ public class TC_07 extends TestBaseRapor {
         //17-"Search" butonuna tıklayın ve unique bir kaydın yapılıp yapılmadıgını dogrulayın
         us_004.listOfHotelsSearchButton.click();
         Assert.assertTrue(us_004.listOfHotelUniqueSearch.isEnabled());
-        actions.moveToElement(hmcPages.kullaniciAdiElement).perform();
-        hmcPages.logOut.click();
-        actions.moveToElement(hmcPages.kullaniciAdiElement).perform();
-        hmcPages.logOut.click();
+
 
     }
 }

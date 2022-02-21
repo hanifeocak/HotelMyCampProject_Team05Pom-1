@@ -31,6 +31,5 @@ public class TC_05 extends TestBaseRapor {
         //4- Yonetici hesabinin acildigini gorur
         Assert.assertTrue(hmcPages.basariliGirisYapildi.isDisplayed());
         extentTest.pass("Giris yapildi");
-        Driver.closeDriver();
     }
 }

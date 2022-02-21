@@ -68,14 +68,9 @@ public class TC_02_NegativeTest extends TestBaseRapor {
         //11-"Mail" kutucuğuna tıklayıp Email Adresi giriniz
         us_004.createHotelEmailBox.sendKeys("yucedalo@gmail.com");
         extentTest.info("Email kutucuguna veri gonderildi");
-        Actions actions = new Actions(Driver.getDriver());
-        actions.moveToElement(hmcPages.kullaniciAdiElement).perform();
-        hmcPages.logOut.click();
+
 
 
 
     }
-
-
-
 }

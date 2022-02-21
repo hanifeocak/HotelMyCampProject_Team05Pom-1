@@ -1,6 +1,7 @@
 package tests.us_010;
 
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.HMCPages;
 import pages.US_010;
@@ -10,6 +11,7 @@ import utilities.TestBaseRapor;
 
 public class TC_02 extends TestBaseRapor {
 
+    @Ignore
     @Test
     public void reservasyonBilgiTabloTesti(){
 

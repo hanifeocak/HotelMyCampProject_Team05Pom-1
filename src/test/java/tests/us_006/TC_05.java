@@ -83,17 +83,17 @@ public class TC_05 extends TestBaseRapor {
             hmcPages.bekle(3);
             // OK butonuna tıklayın.
             hmcPages.saveUyariBoxOk.click();
-            hmcPages.bekle(3);
+            //hmcPages.bekle(3);
 
-            hmcPages.hotelManagementLink.click();
-            hmcPages.hotelRoomsLink.click();
-            hmcPages.listOfHotelRoomsText.click();
-            us_006.listOfHotelsSearchButton.click();
+            //hmcPages.hotelManagementLink.click();
+            //mcPages.hotelRoomsLink.click();
+            //hmcPages.listOfHotelRoomsText.click();
+            //us_006.listOfHotelsSearchButton.click();
             //hmcPages.bekle(2);
             //hmcPages.hotelManagementLink.click();
         //hmcPages.bekle(3);
-        hmcPages.hotelRoomsLink.click();
-        hmcPages.listOfHotelRoomsText.click();
+        //hmcPages.hotelRoomsLink.click();
+        //hmcPages.listOfHotelRoomsText.click();
 
        // Assert.assertEquals(us_006.searchcodebox.getText(),code);
        // extentTest.pass("Kaydedilen otel, code bilgileri ile kontrol edildi");

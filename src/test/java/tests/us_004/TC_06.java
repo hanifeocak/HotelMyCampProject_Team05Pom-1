@@ -56,9 +56,7 @@ public class TC_06 extends TestBaseRapor {
         Assert.assertTrue(us_004.createHotelWasInsertedSuccessfullyText.isDisplayed());
         //15-"OK" butonuna tıklayın ve otel listesini tıklayın
         us_004.createHotelWasInsertedSuccessfullyOkButton.click();
-        Actions actions = new Actions(Driver.getDriver());
-        actions.moveToElement(hmcPages.kullaniciAdiElement).perform();
-        hmcPages.logOut.click();
+
 
 
 

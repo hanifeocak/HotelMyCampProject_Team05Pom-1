@@ -36,6 +36,7 @@ public class TC_04 extends TestBaseRapor {
         us_009_pages.hotelRoomReservationsLink.click();
         us_009_pages.detailsButonu.click();
         us_009_pages.propertiesButonu.click();
+        us_009_pages.bekle(3);
         us_009_pages.saveButonu.click();
         us_009_pages.bekle(3);
 

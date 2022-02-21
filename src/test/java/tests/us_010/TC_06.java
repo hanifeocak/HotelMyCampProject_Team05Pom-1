@@ -4,6 +4,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.HMCPages;
 import pages.US_010;
@@ -14,6 +15,7 @@ import utilities.TestBaseRapor;
 
 public class TC_06 extends TestBaseRapor {
 
+    @Ignore
     @Test
     public void yanlisEmailIleKayıtYapilamazTesti(){
         extentTest=extentReports.createTest("Yanlis email ile rezervasyon gerceklestirilemez testi",
