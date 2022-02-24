@@ -9,14 +9,15 @@ import utilities.Driver;
 import utilities.TestBaseRapor;
 
 public class TC_02 extends TestBaseRapor {
+    US_007 hotelMyCampPage;
 
     @Test
     public void detailsEditGecisTesti(){
+        hotelMyCampPage=new US_007();
         extentTest=extentReports.createTest("detailsEditGecisTesti",
                 "yonetici details butonu ile duzenleme alanina gider");
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         extentTest.info("Url'e gidildi");
-        US_007 hotelMyCampPage=new US_007();
         hotelMyCampPage.girisYap();
 
         //1."LIST OF HOTELROOMS" tablosundaki herhangi bir satırdaki "DETAILS" butonuna tıklanır.

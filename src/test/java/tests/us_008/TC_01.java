@@ -13,11 +13,13 @@ public class TC_01 extends TestBaseRapor {
     // Yönetici olarak gecerli username, gecerli password ile
     // 'Log in' islemi gerceklestirilmelidir.
 
-    HMCPages hmcPages=new HMCPages();
-    US_008Page us_008Page=new US_008Page();
+    HMCPages hmcPages;
+    US_008Page us_008Page;
 
     @Test
     public void testCase01(){
+        hmcPages=new HMCPages();
+        us_008Page=new US_008Page();
         extentTest=extentReports.createTest("yönetici olarak basarili giris testi","yonetici olarak giris yapar");
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
 

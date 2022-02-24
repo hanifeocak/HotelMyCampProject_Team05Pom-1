@@ -15,10 +15,11 @@ public class TC_01 extends TestBaseRapor {
     //5-login butonuna basar
     //6. LISTOFUSER sayfası görüntülenir
 
+    Us_009_Pages us_009_pages;
 
     @Test
     public void  test(){
-        Us_009_Pages us_009_pages= new Us_009_Pages();
+        us_009_pages= new Us_009_Pages();
 
         extentTest=extentReports.createTest("TC_01","otel odasina giris");
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));

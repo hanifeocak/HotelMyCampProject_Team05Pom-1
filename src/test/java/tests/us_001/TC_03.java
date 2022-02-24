@@ -9,10 +9,11 @@ import utilities.Driver;
 import utilities.TestBaseRapor;
 
 public class TC_03 extends TestBaseRapor {
+    AnaSayfaButonlar anaSayfaButonlar;
     @Test
     public void test01() throws InterruptedException {
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
-        AnaSayfaButonlar anaSayfaButonlar = new AnaSayfaButonlar();
+        anaSayfaButonlar = new AnaSayfaButonlar();
         JavascriptExecutor jse=(JavascriptExecutor)Driver.getDriver();
 
         Thread.sleep(3000);

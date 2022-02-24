@@ -13,12 +13,15 @@ import utilities.TestBaseRapor;
 
 public class TC_04 extends TestBaseRapor {
 
+    HMCPages hmcPages;
+    US_010 us010;
+
     @Test
     public void misafirOlarakYaptigiIslemiSayfasınaEklenmesiTesti(){
         extentTest=extentReports.createTest("Misafir olarak yaptıgı islemlerin sayfasına eklenmesi",
                 "Misafir olarak yaptıgı islemleri kullanıcı sayfasında gorur");
-        HMCPages hmcPages=new HMCPages();
-        US_010 us010 = new US_010();
+        hmcPages=new HMCPages();
+        us010 = new US_010();
 
         //1- Kullanıcı URL gider
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));

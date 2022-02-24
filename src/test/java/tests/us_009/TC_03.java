@@ -17,9 +17,11 @@ public class TC_03 extends TestBaseRapor {
     //7. Hotel Management menusunden Room reservation'u secer
     //8.LİST OF RESERVATİONS sayfasindaki search butonuyla arama yapar
     //9.LİST OF RESERVATİONS sayfasindaki clear butonu ile aramayı siler
+    Us_009_Pages us_009_pages;
+
     @Test
     public void  test(){
-        Us_009_Pages us_009_pages= new Us_009_Pages();
+        us_009_pages= new Us_009_Pages();
 
         extentTest=extentReports.createTest("TC_01","otel odasina giris");
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
@@ -33,6 +35,7 @@ public class TC_03 extends TestBaseRapor {
         us_009_pages.contactNameSurnamebox.sendKeys("asd");
         us_009_pages.bekle(3);
         us_009_pages.searchButonu.click();
+        us_009_pages.bekle(2);
         us_009_pages.clearButonu.click();
     }
 

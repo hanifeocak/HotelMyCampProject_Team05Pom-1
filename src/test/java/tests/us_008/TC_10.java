@@ -6,6 +6,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.HMCPages;
 import pages.US_008Page;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -19,10 +20,13 @@ public class TC_10 extends TestBaseRapor {
     //"Yönetici olarak basarili bir rezervasyonun sonucu ""List of Reservation ""
     // kisminda gözlenebilmelidir"
 
-    US_008Page us_008Page = new US_008Page();
+    HMCPages hmcPages;
+    US_008Page us_008Page;
 
     @Test
     public void testCase10() throws InterruptedException, IOException {
+        hmcPages=new HMCPages();
+        us_008Page=new US_008Page();
         extentTest=extentReports.createTest("List of Reservation kisminda rezervasyon kaydini gozlemleme testi","basarili rezervasyon sonucu screenshot ile gozlemlendi");
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
 

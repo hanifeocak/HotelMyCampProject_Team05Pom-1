@@ -1,6 +1,7 @@
 package tests.us_008;
 
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.US_008Page;
 import utilities.ConfigReader;
@@ -11,10 +12,12 @@ public class TC_02 extends TestBaseRapor {
     //Yönetici olarak GECERSIZ username, gecerli password
     // ile 'Log in' islemi gerceklestirilememelidir.
 
-    US_008Page us_008Page=new US_008Page();
+    US_008Page us_008Page;
 
+    @Ignore
     @Test
     public void testCase02(){
+        us_008Page=new US_008Page();
         extentTest=extentReports.createTest("basarili giris yapilamama testi","yonetici olarak giris yapamaz");
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
 

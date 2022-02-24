@@ -3,6 +3,7 @@ package tests.us_008;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.HMCPages;
 import pages.US_008Page;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -12,10 +13,13 @@ public class TC_06 extends TestBaseRapor {
     //Yönetici olarak valid credentialler ile basarili bir rezervasyon eklenebilmeli ve
     //basarili bir rezervayson saglanmalidir.
 
-    US_008Page us_008Page=new US_008Page();
+    HMCPages hmcPages;
+    US_008Page us_008Page;
 
     @Test
     public void testCase06() throws InterruptedException {
+        hmcPages=new HMCPages();
+        us_008Page=new US_008Page();
         extentTest=extentReports.createTest("basarili rezervasyon testi","valid credentialler ile basarili bir rezervasyon eklendi");
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
 

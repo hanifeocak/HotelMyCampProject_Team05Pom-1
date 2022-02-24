@@ -13,12 +13,15 @@ import utilities.TestBaseRapor;
 
 public class TC_03 extends TestBaseRapor {
 
+    HMCPages hmcPages;
+    US_010 us010;
+
     @Test
     public void kullanıcıGirisYpmdnRezYapamazTesti(){
         extentTest=extentReports.createTest("kullanıcı giris yapmadan giris yapamaz testi",
                 "kullanıcı giris yapmadan rezervasyon islemlerini gerceklestiremez");
-        HMCPages hmcPages=new HMCPages();
-        US_010 us010 = new US_010();
+        hmcPages=new HMCPages();
+        us010 = new US_010();
 
         //1- Kullanıcı URL gider
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));

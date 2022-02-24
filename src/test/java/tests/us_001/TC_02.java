@@ -15,11 +15,12 @@ import java.io.File;
 import java.io.IOException;
 
 public class TC_02 extends TestBaseRapor {
+    AnaSayfaButonlar anaSayfaButonlar;
 
     @Test
     public void ikinciGörev() throws IOException {
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
-        AnaSayfaButonlar anaSayfaButonlar = new AnaSayfaButonlar();
+        anaSayfaButonlar = new AnaSayfaButonlar();
         WebElement expectedResult= anaSayfaButonlar.welcomeToHotelmyCamp;
         Assert.assertTrue(expectedResult.isEnabled());
 

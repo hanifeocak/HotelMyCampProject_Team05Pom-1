@@ -8,14 +8,15 @@ import utilities.Driver;
 import utilities.TestBaseRapor;
 
 public class TC_05 extends TestBaseRapor {
+    US_007 hotelMyCampPage;
 
     @Test
     public void deleteTest() throws InterruptedException {
+        hotelMyCampPage=new US_007();
         extentTest=extentReports.createTest("propertiesSekmesiTesti",
                 "yonetici oda detaylarini duzenler");
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         extentTest.info("Url'e gidildi");
-        US_007 hotelMyCampPage=new US_007();
         hotelMyCampPage.girisYap();
 
         hotelMyCampPage.hotelManagementLinki.click();

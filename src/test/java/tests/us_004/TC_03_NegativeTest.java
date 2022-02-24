@@ -12,13 +12,15 @@ import utilities.TestBaseRapor;
 public class TC_03_NegativeTest extends TestBaseRapor {
 
 
-    HMCPages hmcPages=new HMCPages();
-    US_004 us_004=new US_004();
+    HMCPages hmcPages;
+    US_004 us_004;
 
 
     //TC_002 Code,Name,Adress,Phone,Email bilgileri ilgili alana girilebilmeli
     @Test
     public void test02(){
+        hmcPages=new HMCPages();
+        us_004=new US_004();
         extentTest=extentReports.createTest("Ilgili alanlari doldurma testi",
                 "yonetici ilgili kutucuklari gorup doldurmali");
 

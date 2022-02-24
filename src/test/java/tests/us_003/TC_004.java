@@ -11,6 +11,8 @@ import utilities.Driver;
 import utilities.TestBaseRapor;
 
 public class TC_004 extends TestBaseRapor {
+    HMCPages hmcPages;
+    US003Pages us003Pages;
     WebDriver driver;
 
     @Test
@@ -25,8 +27,8 @@ public class TC_004 extends TestBaseRapor {
 
 
         extentTest=extentReports.createTest("TC_004","4.Profile Pozitif Giris Testi");
-        HMCPages hmcPages=new HMCPages();
-        US003Pages us003Pages=new US003Pages();
+        hmcPages=new HMCPages();
+        us003Pages=new US003Pages();
 
         // 1-Kullanici Anasayfaya gider
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));

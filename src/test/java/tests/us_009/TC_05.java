@@ -19,9 +19,11 @@ public class TC_05 extends TestBaseRapor {
     //9. Yönetici Edit Hotelroomreservatıon sayfasindaki "delete" butonunu tıklar
     //10.Yönetici "Would you like to continue" alert yazisini görür
     //11.Yönetici "Ok" butonuna basar
-    @Test (enabled = false)
+    Us_009_Pages us_009_pages;
+
+    @Test
     public void  test(){
-        Us_009_Pages us_009_pages= new Us_009_Pages();
+        us_009_pages= new Us_009_Pages();
 
         extentTest=extentReports.createTest("TC_01","otel odasina giris");
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));

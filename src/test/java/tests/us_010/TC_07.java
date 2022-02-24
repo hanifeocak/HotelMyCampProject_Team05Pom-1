@@ -15,12 +15,15 @@ import utilities.TestBaseRapor;
 
 public class TC_07 extends TestBaseRapor {
 
+    HMCPages hmcPages;
+    US_010 us010;
+
     @Test
     public void RezervasyonYapmaIslemiTesti() {
         extentTest=extentReports.createTest("Rezervasyon islemi yapilir",
                 "Kullanıcı gerekli bilgileri girerek rezervasyon islemi yapar");
-        HMCPages hmcPages=new HMCPages();
-        US_010 us010 = new US_010();
+        hmcPages=new HMCPages();
+        us010 = new US_010();
 
         //1- Kullanıcı URL gider
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));

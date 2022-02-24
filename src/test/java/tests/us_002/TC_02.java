@@ -6,10 +6,10 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 public class TC_02 extends TestBaseRapor {
+    HMCPages hmcPages;
     @Test
     public void userNameKutusuGorunurVeriGirisiTesi(){
-
-        HMCPages hmcPages= new HMCPages();
+        hmcPages= new HMCPages();
         extentTest=extentReports.createTest("TC_02",
                 "Username kutusu gorunur ve veri girisi yapilma testi");
 

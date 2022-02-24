@@ -91,7 +91,7 @@ public class US_010 {
     @FindBy (xpath="//input[@value='Search']")
     public WebElement searchButton;
 
-    @FindBy (xpath = "(//a[@href='/RoomDetail/71'])[2]")
+    @FindBy (xpath = "(//a[@href='/RoomDetail/31'])[2]")
     public WebElement ilkAramaSonucuElement;
 
     @FindBy (xpath = "//input[@id='NameOnCreditCard']")
@@ -133,7 +133,7 @@ public class US_010 {
     @FindBy (xpath = "(//div[@class='row'])[2]")
     public WebElement rezervasyonYapilmazYazisiElement;
 
-    @FindBy (xpath = "//a[@href='/account/logon?returnUrl=%2FRoomDetail%2F71']")
+    @FindBy (xpath = "//a[@href='/account/logon?returnUrl=%2FRoomDetail%2F31']")
     public WebElement rezervasyonYapilmazSayfasıLogInButtonElement;
 
     @FindBy (xpath = "//h2[@class='mb-4']")
@@ -143,6 +143,9 @@ public class US_010 {
 
     @FindBy (xpath = "(//tr//td[4])[1]")
     public WebElement RezEndDateElement;
+
+    @FindBy (xpath="//a[@href='/Profile/ReservationDetail/2041']")
+    public WebElement detailsButtonElement;
 
     // =================================== TC_08==========================================
 

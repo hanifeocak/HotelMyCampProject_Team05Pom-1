@@ -13,14 +13,14 @@ import utilities.Driver;
 import utilities.TestBaseRapor;
 
 public class TC_03 extends TestBaseRapor {
-
+    US_007 hotelMyCampPage;
     @Test
     public void editHotelRoomsTesti(){
+        hotelMyCampPage=new US_007();
         extentTest=extentReports.createTest("editHotelRoomsTesti",
                 "yonetici oda detaylarini duzenler");
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         extentTest.info("Url'e gidildi");
-        US_007 hotelMyCampPage=new US_007();
         hotelMyCampPage.girisYap();
 
         hotelMyCampPage.hotelManagementLinki.click();

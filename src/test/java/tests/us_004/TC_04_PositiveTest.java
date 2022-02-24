@@ -9,16 +9,19 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 
-public class TC_04_PositiveTest extends TestBaseRapor {
+public class
+TC_04_PositiveTest extends TestBaseRapor {
 
 
-    HMCPages hmcPages=new HMCPages();
-    US_004 us_004=new US_004();
+    HMCPages hmcPages;
+    US_004 us_004;
 
 
     //TC_002 Code,Name,Adress,Phone,Email bilgileri ilgili alana girilebilmeli
     @Test
     public void test02(){
+        hmcPages=new HMCPages();
+        us_004=new US_004();
         extentTest=extentReports.createTest("Ilgili alanlari doldurma testi",
                 "yonetici ilgili kutucuklari gorup doldurmali");
 
@@ -47,7 +50,7 @@ public class TC_04_PositiveTest extends TestBaseRapor {
         //6- "Add Hotel" butonuna erisebilir.
         Assert.assertTrue(hmcPages.addHotelLinki.isDisplayed());
         extentTest.info("Add hotel kisminin gorunur oldugu goruldu");
-        hmcPages.addHotelLinki.click(); // EMRAH
+        hmcPages.addHotelLinki.click();
 
         //7-"Code" kutucuğuna tıklayıp bir Kod giriniz
         hmcPages.addHotelCodeBox.sendKeys("187150015");

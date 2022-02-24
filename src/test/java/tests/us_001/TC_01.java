@@ -12,12 +12,12 @@ import java.io.File;
 import java.io.IOException;
 
 public class TC_01 {
+    AnaSayfaButonlar anaSayfaButonlar;
 
     @Test
     public void test01() {
-
+        anaSayfaButonlar = new AnaSayfaButonlar();
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
-        AnaSayfaButonlar anaSayfaButonlar = new AnaSayfaButonlar();
         anaSayfaButonlar.Home.click();
         anaSayfaButonlar.Rooms.click();
         Driver.getDriver().navigate().back();

@@ -13,16 +13,18 @@ import utilities.TestBaseRapor;
 
 public class TC_01 extends TestBaseRapor {
 
+    HMCPages hmcPages;
+
 
     @Test
     public void test01() {
+        hmcPages = new HMCPages();
         extentTest=extentReports.createTest("yonetici login testi",
                 "yonetici oda olusturma islemlerini yapmasi gerekir");
 
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
 
         extentTest.info("Url'e gidildi");
-        HMCPages hmcPages = new HMCPages();
 
         WebElement firstLogInElement = hmcPages.firstLogInElement;
 

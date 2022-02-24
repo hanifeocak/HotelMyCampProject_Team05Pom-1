@@ -7,11 +7,12 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class TC_04 {
+    AnaSayfaButonlar anaSayfaButonlar;
 
     @Test
     public void test01() throws InterruptedException {
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
-        AnaSayfaButonlar anaSayfaButonlar = new AnaSayfaButonlar();
+        anaSayfaButonlar = new AnaSayfaButonlar();
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
 
         Thread.sleep(3000);

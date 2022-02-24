@@ -1,4 +1,4 @@
-package tests.us_005;
+package tests.us_002.us_005;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -9,10 +9,12 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 public class TC_04 extends TestBaseRapor {
-    HMCPages hmcPages = new HMCPages();
-    US_005Pages us005Pages=new US_005Pages();
+    HMCPages hmcPages;
+    US_005Pages us005Pages;
     @Test
     public  void test01() {
+        hmcPages = new HMCPages();
+        us005Pages=new US_005Pages();
         extentTest=extentReports.createTest("kullanıcı hesabı olusturma islemi testi",
                 "kullanıcı hesap olusturma islemlerini yapmasi gerekir");
         //https://hotelmycamp.com/

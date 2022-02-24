@@ -13,10 +13,13 @@ import utilities.TestBaseRapor;
 
 public class TC_01 extends TestBaseRapor {
 
-
+    HMCPages hmcPages;
+    US_010 us010;
 
     @Test
     public void kullanıcıHesabıOlusturmaIslemiTesti(){
+        hmcPages=new HMCPages();
+        us010 = new US_010();
 
 
         extentTest=extentReports.createTest("kullanıcı hesabı olusturma islemi testi",
@@ -24,8 +27,7 @@ public class TC_01 extends TestBaseRapor {
 
 
 
-        HMCPages hmcPages=new HMCPages();
-        US_010 us010 = new US_010();
+
 
 
         //1- Kullanıcı URL gider

@@ -11,11 +11,12 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class TC_05 {
+    AnaSayfaButonlar anaSayfaButonlar;
 
     @Test
     public void test01() throws InterruptedException {
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
-        AnaSayfaButonlar anaSayfaButonlar = new AnaSayfaButonlar();
+        anaSayfaButonlar = new AnaSayfaButonlar();
         Actions actions=new Actions(Driver.getDriver());
         actions.sendKeys(Keys.DOWN).perform();
         actions.sendKeys(Keys.DOWN).perform();

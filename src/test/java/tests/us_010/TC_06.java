@@ -15,13 +15,16 @@ import utilities.TestBaseRapor;
 
 public class TC_06 extends TestBaseRapor {
 
+    HMCPages hmcPages;
+    US_010 us010;
+
 
     @Test
     public void yanlisEmailIleKayıtYapilamazTesti(){
         extentTest=extentReports.createTest("Yanlis email ile rezervasyon gerceklestirilemez testi",
                 "Daha once yaptıgı rezervasyon bilgilerini guncelleyebilmeli");
-        HMCPages hmcPages=new HMCPages();
-        US_010 us010 = new US_010();
+        hmcPages=new HMCPages();
+        us010 = new US_010();
 
         //1- Kullanıcı URL gider
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));

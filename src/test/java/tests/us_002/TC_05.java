@@ -6,10 +6,10 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 public class TC_05 extends TestBaseRapor {
+    HMCPages hmcPages;
     @Test
     public void basariliGirisYapildiTesti(){
-
-        HMCPages hmcPages= new HMCPages();
+        hmcPages= new HMCPages();
 
         extentTest=extentReports.createTest("TC_04",
                 "Log in butonu gorunur ve erisilebilir oldugu testi");

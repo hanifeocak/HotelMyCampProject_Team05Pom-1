@@ -16,9 +16,11 @@ public class TC_02 extends TestBaseRapor {
     //6. LİSTOFUSER sayfasindaki Hotel Management menusune tıklar
     //7. Hotel Management menusunden Room reservation'u secer
     //8.LİST OF RESERVATİONS sayfasini görüntüler
+    Us_009_Pages us_009_pages;
+
     @Test
     public void  test(){
-        Us_009_Pages us_009_pages= new Us_009_Pages();
+        us_009_pages= new Us_009_Pages();
 
         extentTest=extentReports.createTest("TC_01","otel odasina giris");
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));

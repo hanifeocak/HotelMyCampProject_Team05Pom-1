@@ -1,5 +1,6 @@
 package tests.us_010;
 
+import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
@@ -11,13 +12,16 @@ import utilities.TestBaseRapor;
 
 public class TC_05 extends TestBaseRapor {
 
+    HMCPages hmcPages;
+    US_010 us010;
+
 
     @Test
     public void rezervasyonBilgileriGuncellemeTesti(){
         extentTest=extentReports.createTest("Rezervasyon bilgileri guncelleme testi",
                 "Daha once yaptıgı rezervasyon bilgilerini guncelleyebilmeli");
-        HMCPages hmcPages=new HMCPages();
-        US_010 us010 = new US_010();
+        hmcPages=new HMCPages();
+        us010 = new US_010();
 
         //1- Kullanıcı URL gider
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
@@ -38,7 +42,7 @@ public class TC_05 extends TestBaseRapor {
         extentTest.info("Reservations sayfasina gider");
 
         //5- End Date degistirir
-        Assert.assertTrue(us010.RezEndDateElement.isEnabled());
+        us010.RezEndDateElement.sendKeys("28.02.2022", Keys.ENTER);
         extentTest.pass("Gunceleme islemi yapilabilir");
 
     }

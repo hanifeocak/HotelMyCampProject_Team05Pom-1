@@ -7,9 +7,11 @@ import utilities.Driver;
 import utilities.TestBaseRapor;
 
 public class TC_001 extends TestBaseRapor {
+    HMCPages hmcPages;
 
     @Test
     public void test01(){
+        hmcPages=new HMCPages();
         //1.Kullanici websitesine erisim saglamali ve Login butonunu gormelidir.
 
         //1-Kullanici url'e   gider.
@@ -17,7 +19,7 @@ public class TC_001 extends TestBaseRapor {
 
         extentTest=extentReports.createTest("TC_001","1.Url erisim Testi");
 
-        HMCPages hmcPages=new HMCPages();
+
 
         //1-Kullanici url'e gider.
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));

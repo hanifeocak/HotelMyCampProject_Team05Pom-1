@@ -6,9 +6,10 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 public class TC_01 extends TestBaseRapor {
+    HMCPages hmcPages;
     @Test
     public void girisSayfasiTesti(){
-        HMCPages hmcPages= new HMCPages();
+        hmcPages= new HMCPages();
 
         extentTest=extentReports.createTest("TC_01",
                 "Giris sayfasının gorulebilir olmasi Testi");

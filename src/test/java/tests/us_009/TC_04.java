@@ -21,9 +21,11 @@ public class TC_04 extends TestBaseRapor {
     //9.Yönetici save butonuna basar
     //10.Yönetici "User was uptadet successfully" alert yazisini görür
     //11. Yönteci "Ok" butonuna basar
+    Us_009_Pages us_009_pages;
+
     @Test
     public void  test(){
-        Us_009_Pages us_009_pages= new Us_009_Pages();
+        us_009_pages= new Us_009_Pages();
 
         extentTest=extentReports.createTest("TC_01","otel odasina giris");
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));

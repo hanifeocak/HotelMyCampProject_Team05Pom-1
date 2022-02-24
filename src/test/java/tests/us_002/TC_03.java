@@ -6,9 +6,10 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 public class TC_03 extends TestBaseRapor {
+    HMCPages hmcPages;
     @Test
     public void passwordKutusuGorunurVeriGirisiTesi(){
-        HMCPages hmcPages= new HMCPages();
+        hmcPages= new HMCPages();
 
         extentTest=extentReports.createTest("TC_03",
                 "Password kutusu gorunu ve veri girisi yapilma testi");

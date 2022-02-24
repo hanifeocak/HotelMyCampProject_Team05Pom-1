@@ -10,10 +10,10 @@ import utilities.Driver;
 import utilities.TestBaseRapor;
 
 public class TC_02 extends TestBaseRapor {
+    HMCPages hmcPages;
     @Test
     public void test02(){
-
-        HMCPages hmcPages=new HMCPages();
+        hmcPages=new HMCPages();
         extentTest=extentReports.createTest("yonetici login testi",
                 "yonetici oda olusturma islemlerini yapmasi gerekir");
 

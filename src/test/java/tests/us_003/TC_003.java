@@ -16,6 +16,8 @@ import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
 public class TC_003 extends TestBaseRapor {
+    HMCPages hmcPages;
+    US003Pages us003Pages;
     static WebDriver driver;
     static Select select;
     static Select select2;
@@ -42,8 +44,8 @@ public class TC_003 extends TestBaseRapor {
 
         extentTest=extentReports.createTest("TC_003","3.Basvuru Tormu Testi");
 
-        HMCPages hmcPages=new HMCPages();
-        US003Pages us003Pages=new US003Pages();
+        hmcPages=new HMCPages();
+        us003Pages=new US003Pages();
         Actions actions = new Actions(Driver.getDriver());
 
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
@@ -52,7 +54,7 @@ public class TC_003 extends TestBaseRapor {
 
 
         //1- Username test datasi girilir.
-        us003Pages.registrationFromUsername.sendKeys("Emre17920");
+        us003Pages.registrationFromUsername.sendKeys("Emre188887920");
         extentTest.info("Username girildi");
 
         //2- Password test datasi girilir.
@@ -60,7 +62,7 @@ public class TC_003 extends TestBaseRapor {
         extentTest.info("Password girildi");
 
         //3- Email test datasi girilir.
-        us003Pages.registrationFromEmail.sendKeys("emre17920@techproed.com");
+        us003Pages.registrationFromEmail.sendKeys("emre17920888@techproed.com");
         extentTest.info("email girildi");
 
         //4- Full Name test datasi girilir.

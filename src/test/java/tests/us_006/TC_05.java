@@ -18,13 +18,15 @@ import java.io.IOException;
 
 public class TC_05 extends TestBaseRapor {
 
-    US_006 us_006=new US_006();
-    HMCPages hmcPages = new HMCPages();
-    Faker faker=new Faker();
+    US_006 us_006;
+    HMCPages hmcPages;
 
 
     @Test
     public void test01() {
+        us_006=new US_006();
+        hmcPages = new HMCPages();
+        Faker faker=new Faker();
         extentTest=extentReports.createTest("yonetici login testi",
                 "yonetici oda olusturma islemlerini yapmasi gerekir");
 
@@ -55,7 +57,6 @@ public class TC_05 extends TestBaseRapor {
             //Açılan sayfadaki tüm metin kutularına istediğiniz verileri girin.
 
             Actions actions = new Actions(Driver.getDriver());
-            Faker faker = new Faker();
             actions.click(hmcPages.addHotelCodeBox)
                     .sendKeys(faker.address().zipCode()).
                     sendKeys(Keys.TAB).

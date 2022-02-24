@@ -10,6 +10,8 @@ import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
 public class TC_005 extends TestBaseRapor {
+    HMCPages hmcPages;
+    US003Pages us003Pages;
     //  5-Kullanici Negatif giris testi
 
     //   1-Kullanici url'e gider
@@ -22,8 +24,8 @@ public class TC_005 extends TestBaseRapor {
     public void test05() {
         extentTest=extentReports.
                 createTest("TC_005","5.Kullanici Negatif Giris Testi");
-        HMCPages hmcPages=new HMCPages();
-        US003Pages us003Pages=new US003Pages();
+        hmcPages=new HMCPages();
+        us003Pages=new US003Pages();
 
         //   1-Kullanici url'e gider
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
