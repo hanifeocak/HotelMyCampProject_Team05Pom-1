@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="hotelMyCampProject_Team05POM" />
         <module name="HotelMyCampProject_Team05Pom" />
+        <module name="com.Batch44POM" />
       </profile>
     </annotationProcessing>
   </component>
